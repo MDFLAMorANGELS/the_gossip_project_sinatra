@@ -1,0 +1,20 @@
+Amandine,Pour prendre en compte le cas où le tableau gossips est vide dans la vue index.
+Amandine,"2.6. La vue show d'un potin
+Bravo, tu as fait une grosse partie du projet et c'est déjà un super résultat. Tu peux être fier ! Comme je sens que tu as le niveau, la suite sera moins pas à pas et ce sera un peu plus dur. Mais avec les bonnes recherches et les bons indices, tu vas cartonner j'en suis sûr 😘
+
+Prochaine étape : afficher tes potins un à un.
+
+2.6.1. Le principe
+Nous allons faire des pages ""profil"" pour chaque potin, c’est-à-dire que nous allons créer une page par potin afin de l'afficher lui seul. C'est ce qu'on appelle un page ""show"". Quand ""index"" est une page unique qui affiche tous les potins, il existe autant de page ""show"" que de potin.
+
+Nous voudrions faire en sorte que si l'on va sur http://localhost:4567/gossips/2/, le site nous affiche la page ""show"" du gossip n°2. Idem avec le numéro 3, numéro 4, numéro 1, etc. Alors tu imagines bien qu'on peut avoir 10, 100 voire 1000 potins : on va pas rentrer toutes ces routes à la main, même en tentant un .each sur tous les gossips pour faire les routes correspondantes. Pour cela, on va créer dans notre app Sinatra ce qu'on appelle une URL dynamique.
+
+C'est quoi une URL dynamique ? C'est une URL qui contient une variable. Au lieu de saisir les routes ""gossips/2"", ""gossips/3"", etc. On va se débrouiller pour pouvoir saisir une route ""gossips/x"" et qu'en fonction de la valeur de x, notre code s'adapte et affiche ce qu'il faut.
+
+Pour récapituler, nous allons :
+
+Créer une route dynamique pour qu'à chaque fois qu'un utilisateur rentre une URL du type http://localhost:4567/gossips/x/, Sinatra comprenne que l'on veut voir la page show du potin N°x en BDD ;
+Récupérer dans notre BDD le potin N°x avec une belle méthode #find ;
+Afficher le contenu du potin dans la page show.
+2.6.2. Les routes dynamiques
+Pour éviter d'avoir à rentrer à la main une route pour chaque potin, il existe une méthode pour avoir des URLs dynamiques. Pour ceci, je t'invite à regarder la documentation d'introduction de Sinatra qui explique comment faire ses routes. Voici l'exemple qu'elle propose afin de rajouter, au sein d'une route, une variable (par exemple :name) :"

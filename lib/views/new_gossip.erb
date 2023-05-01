@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>The Gossip Project</title>
+    </head>
+    <body>
+        <h1>Mon super site de gossip !</h1>
+        <a href="/"><input value="Accueil" type="button"></a>
+        <h2> Créer ton pottin ! </h2>
+        <p>Balance ton potins dans le formulaire juste en dessous</p>
+        <form action='/gossips/new' method='POST'>
+            Saisi ici ton nom : <input placeholder="Pseudo" type='text' name='gossip_author'/><br/><hr>
+            Balance ton potin : <textarea placeholder="Votre contenue ..." id="gossip_content" name="gossip_content" rows="5" cols="33"></textarea><br/>
+            <input type='submit'/>
+            <input type='reset'/>
+        </form>
+    </body>
+</html>
+
+<style> 
+body {
+    margin: auto 20%;
+    font-family: arial, sans-serif ;
+    background-color: #F3F3F3;
+}
+h1 {
+    color: #2E110B;
+    background-color: #D4B3AB;
+    text-align: center;
+    border-radius: 10px;
+    margin: 0 0 20px 0;
+}
+textarea {
+  width: 100%;
+  height: 150px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  font-size: 16px;
+  resize: none;
+}
+input[type=text] {
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    font-size: 16px;
+}
+input[type=button], input[type=submit], input[type=reset] {
+  background-color: #04AA6D;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 15px;
+}
+a {
+    text-decoration: none;
+}
+</style>
