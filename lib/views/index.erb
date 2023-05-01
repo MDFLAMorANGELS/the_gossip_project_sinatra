@@ -1,6 +1,7 @@
 <html>
     <head>
         <title>The Gossip Project</title>
+        <link rel="shortcut icon" type="image/png" href="https://cdn.discordapp.com/emojis/1094966135285370892.webp?size=96&quality=lossless"/>
     </head>
     <body>
         <header>
@@ -12,6 +13,7 @@
             <div class="container">
                 <% gossips.each do |gossip| %>
                 <div class="gossip">
+                    <img src="https://cdn.discordapp.com/emojis/1094966135285370892.webp?size=96&quality=lossless" />
                     <p class="author"><%= gossip.author %> a écrit </p><br/>
                     <p class="content"><%= gossip.content %></p><br/>                    
                 </div>
@@ -70,5 +72,9 @@
         margin: 4px 2px;
         cursor: pointer;
         border-radius: 15px;
+    }
+    img {
+        width: 50px;
+        float: right;
     }
 </style>
