@@ -18,3 +18,5 @@ Récupérer dans notre BDD le potin N°x avec une belle méthode #find ;
 Afficher le contenu du potin dans la page show.
 2.6.2. Les routes dynamiques
 Pour éviter d'avoir à rentrer à la main une route pour chaque potin, il existe une méthode pour avoir des URLs dynamiques. Pour ceci, je t'invite à regarder la documentation d'introduction de Sinatra qui explique comment faire ses routes. Voici l'exemple qu'elle propose afin de rajouter, au sein d'une route, une variable (par exemple :name) :"
+Jerry,"Sinatra
+Tu vas faire ton premier site en Ruby, en explorant Sinatra, un framework qui permet de faire du web. Le framework est assez bas-niveau, c'est à dire que tu devras presque tout coder toi-même. Là où Rails est plus haut-niveau, et qu'il fera tout le taf pour toi."

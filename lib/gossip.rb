@@ -18,7 +18,7 @@ class Gossip
           gossip = Gossip.new(row[0], row[1]) # On crée un objet Gossip avec les données lues
           all_gossips << gossip # On ajoute le nouveau gossip à notre array
         end
-        return all_gossips # On retourne l'array contenant tous les potins
+        return all_gossips.reverse! # On retourne l'array contenant tous les potins
     end
-    
+
   end
