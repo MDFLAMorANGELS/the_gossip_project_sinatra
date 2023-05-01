@@ -1,7 +1,16 @@
 # Mon projet gossip avec sinatra
 
-## ENJOY ##
+## Installation
 
-Télécharger le projet et effectué un bundle install
+Use bundle install no init gem
 
-lancé rackup -p 4567 depuis la racine du projet
+```bash
+bundle install
+```
+
+## Usage
+
+```ruby
+rackup 
+```
+![Ruby](https://img.shields.io/badge/ruby-%23CC342D.svg?style=for-the-badge&logo=ruby&logoColor=white)
