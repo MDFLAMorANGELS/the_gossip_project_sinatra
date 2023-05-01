@@ -10,7 +10,8 @@ class ApplicationController < Sinatra::Base
   end
 
   post '/gossips/new' do
-    Gossip.new(params["gossip_author"], params["gossip_content"]).save
+    time = Time.now.strftime("%Y-%m-%d %H:%M")
+    Gossip.new(params["gossip_author"], params["gossip_content"],time).save
     redirect '/'
   end
 
